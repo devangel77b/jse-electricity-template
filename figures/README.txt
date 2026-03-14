@@ -1,6 +1,6 @@
 This is where we will prepare your figures.
 
-Figures should be formatted for 1 column width which is 3.4167 inches with is 246 point.
+Figures should be formatted for 1 column width which is 3.5 inches for IEEEtran.
 
 Vector art - like graphs and diagrams you drew, should be done as a SVG in something like Inkscape (free) or Adobe Illustrator.
 
