@@ -1,4 +1,4 @@
-﻿# jse-mechanics-template
+﻿# jse-electricity-template
 ### D Evangelista, 2026
 
 
@@ -7,8 +7,9 @@
 
 ## Should I use this template?
 
-Use this template if you are preparing an article for submission to [Journal of Science & Engineering](https://j.snerds.org) **in the area of physics/mechanics**. Do not use this template if your article is in electricity and magnetism (use the IEEE template), or for senior project or Hackathon abstracts. Articles in the areas of computer science, chemistry, biology, advanced mathematics, or other are still TBD but will likely use some other appropriate journal formatting. 
+Use this template if you are preparing an article for submission to [Journal of Science & Engineering](https://j.snerds.org) **in the area of physics/electricity and magnetism**. Do not use this template if your article is in mechanics, or for senior project or Hackathon abstracts. Articles in the areas of computer science, chemistry, biology, advanced mathematics, or other are still TBD but will likely use some other appropriate journal formatting. 
 
+For articles in the area of physics/electricity and magnetism or electronics or electrical engineering, J S&E uses [IEEEtran latex class](https://ctan.org/pkg/ieeetran?lang=en). See also the IEEEtran documentation at [https://us.mirrors.cicku.me/ctan/macros/latex/contrib/IEEEtran/IEEEtran_HOWTO.pdf] and [http://www.michaelshell.org/tex/ieeetran/]
 
 
 ## Using github
@@ -91,9 +92,15 @@ J S&E uses bibtex to handle reference formatting. If you are unable to do bibtex
  * Do not cite junk material. No blogs, no pop websites, no Wikipedia. 
  * **Fake citations will cause your article to be rejected**
  
-References are checked when accepted articles are sent to Crossref for indexing. 
+References are checked when accepted articles are sent to Crossref for indexing.
+
+
+## Author biographies
+IEEEtran provides a way to do author biographies and you are encouraged to include yours. Photos are optional but if you choose to do one make it professional and make it have a 5:4 aspect ratio. Keep it short and to the point or the editor will edit yours. 
+
 
 
 ## AI check
 You are required to do spot checks for AI and plagiarism and submit those as part of your initial submission. Reviewers and the editor will also check. Your submissions are also checked with a plagiarism and AI detector. **If you submit AI or plagiarized work your article may be rejected and/or disciplinary action may be taken.** By showing a continuous chain from initial outlines, drafts, etc through a Github history, as well as revisions and comments and responses to reviewers you help to establish the work as your own and also make the science more transparent.  
  
+

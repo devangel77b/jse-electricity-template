@@ -1,90 +1,74 @@
-%\documentclass[reprint,amsmath,amssymb,aps,twoside]{revtex4-2} % for editor use only
+%\documentclass[10pt,journal,twoside]{IEEEtran} % for editor use only for final preprint
 
-% For initial submission use these lines
-\documentclass[draft,amsmath,amssymb,aps,twoside]{revtex4-2}
-\RequirePackage{lineno}
+% For initial draft
+\documentclass[10pt,draftcls,journal,onecolumn]{IEEEtran}
+\usepackage{endfloat}
+%\usepackage[switch]{lineno}
+\usepackage{lineno}
 
 
-
-% DO NOT CHANGE THINGS BELOW HERE
-\usepackage{graphicx}
+\usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
-\usepackage{dcolumn}
-\usepackage{bm}
+\usepackage{graphicx}
 \usepackage{siunitx}
-%\usepackage{tikz,pgfplots}
-\sisetup{separate-uncertainty=true, multi-part-units=single}
-\usepackage[colorlinks,allcolors=blue]{hyperref}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
 \usepackage{cleveref}
 \crefname{equation}{}{}
+\Crefname{equation}{}{}
 \crefname{figure}{Fig.}{Figs.}
+\Crefname{figure}{Fig.}{Figs.}
 \crefname{table}{Table}{Tables}
-\usepackage{svg}
-\svgpath{{./figures}}
+\Crefname{table}{Table}{Tables}
+\usepackage{booktabs}
+\usepackage{multirow}
 
 
-
-
-% set PDF metadata
-% AUTHORS EDIT THIS PART
+\title{She loves you, yeah, yeah, yeah} % Your title goes here
+\author{John Lennon\thanks{Manalapan High School}, Paul McCartney, George Harrison,and Ringo Starr\thanks{Author for correspondence: 420rstarr@frhsd.com}\thanks{Authors are with the Science \& Engineering Magnet Program, Manalapan High School, 20 Church Lane, Englishtown, NJ 07726, USA}} % Authors names here
+% First author is normally a special position
+% Corresponding author is a special position
+% Last author normally most senior
+% You can put your names in any order you decide but be aware of these conventions
+\date{\today}
+\markboth{Journal of Science \& Engineering, Vol.~1, No.~2,~December 13, 2024}{Lennon \MakeLowercase{\textit{et al.}}: She loves you} % may need shortened form of author names or title
+\setcounter{page}{1} % LEAVE FOR EDITOR
+\newcommand{\keywords}{electric potential, equipotential lines, electric field visualizations, saline conductive medium, electrostatics, electric field mapping, data visualization in electrostatics, gel electrophoresis, electric field dynamics} % put your keywords here, lower case unless proper noun or acronym, separated by commas
+\makeatletter
+\AtBeginDocument{
 \hypersetup{%
-pdftitle={She loves you, yeah, yeah, yeah}, % full title here
-pdfauthor={John Lennon, Paul McCartney, George Harrison, and Ringo Starr}, % full author list here
-}
+pdftitle={\@title},
+pdfauthor={\@author},
+pdfsubject={physics},
+pdfkeywords={\keywords}}}
+%\IEEEoverridecommandlockouts
+%\IEEEpubid{\thanks{\url{https://doi.org/10.64804/xxxxxxxx}}} % LEAVE FOR EDITOR
+\makeatother
 
 
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[RE,RO]{J S\&E \textbf{2}, xx--xx (2026)} % FOR EDITOR ONLY
-\fancyhead[LO]{Lennon \emph{et al}} % if many authors
-%\fancyhead[LO]{John and Dee} % if short enough to list all authors
-\fancyhead[LE]{She loves you, yeah, yeah, yeah} % full or short title depending on what fits
-%\fancyhead[LE}{Several species of small furry animals gathered together in a cave and grooving with a pict} % might be too long
-%\fancyhead[LE]{Several species grooving} % might be a short version of the title that fits
-\fancyfoot[C]{\thepage}
-\fancypagestyle{mytitlepage}{
-\fancyhf{}
-\fancyhead[C]{Journal of Science \& Engineering \textbf{2}, xx--xx (2026)} % FOR EDITOR ONLY
-\fancyfoot[C]{\thepage}
-}
+
+
+
 
 
 \begin{document}
-%\setcounter{page}{67} % FOR EDITOR USE ONLY
-\linenumbers % FOR EDITOR USE ONLY
+\linenumbers % for editor use
+\maketitle
 
-% AUTHORS EDIT THIS PART
-\title{She loves you, yeah, yeah, yeah}
-\author{John Lennon}
-\altaffiliation{Manalapan High School} % use for non S&E authors
-\author{Paul McCartney}
-\author{George Harrison}
-\author{Ringo Starr}
-\email{Contact author: 420rstarr@frhsd.com} % use FRHSD address
-% For S&E authors
-\affiliation{Science \& Engineering Magnet Program, \href{https://manalapan.frhsd.com/}{Manalapan High School}, Englishtown, NJ 07726 USA}
-\date{\today}
-
-
-% AUTHORS PUT YOUR MANUSCRIPT IN BELOW HERE
+% AUTHORS PUT YOUR ABSTRACT HERE
 \begin{abstract}
 The abstract should be one paragraph only and normally has no references. It is the second thing people read after your title and may be the only thing they read if it fails in its job. It should give an overview of the work done and what the findings were. 
 \end{abstract}
 
-% For revtex format this will not print on the article page but will be used in setting 
-% the journal metadata so include keywords. Lowercase unless they are acronyms or proper nouns
-% and pick keywords that will actually help people find your work properly. 
-\keywords{kinematics, pop, time series}
-
-\maketitle\thispagestyle{mytitlepage}
-
-%The current column width is \the\columnwidth
+\begin{IEEEkeywords}
+\keywords
+\end{IEEEkeywords}
 
 \section{Introduction}
+%\IEEEPARstart{T}{he electric} potential $V$ of a particle 
+% The editor will do this
 The introduction should work from broad to specific. Give major important background information or set up the major concepts to be used or tested. Set up the key research questions or hypotheses to tested. Optionally, give top level overview of method to be used. 
 
-This section also acts as a literature review of other important work in the field and relevant to the questions at hand. An example of how to cite something is here \cite{tipler}. Here is another example \cite{openstax}. The actual citation data is provided in the file \texttt{example.bib} which you should also look at. Two more examples are \cite{rombauer:1931:joy, binzel:1988:hemispherical}. Please do not type in your references to try to force them to be MLA or whatever format as these are not the right formats for a physics paper; \LaTeX\ and \texttt{bibtex} know how to do the necesary formatting. Typing in your references in some other format will make more work for the editors and they will be grumpy. If you absolutely cannot figure out how to do references, pick a consistent label name for each reference to use, and the editor may help you out. 
+This section also acts as a literature review of other important work in the field and relevant to the questions at hand. An example of how to cite something is here \cite{tipler}. Here is another example \cite{openstax}. The actual citation data is provided in the file \texttt{example.bib} which you should also look at. Two more examples are \cite{rombauer:1931:joy, binzel:1988:hemispherical}. Please do not type in your references to try to force them to be MLA or whatever format as these are not the right formats for an IEEE paper; \LaTeX\ and \texttt{bibtex} know how to do the necesary formatting. Typing in your references in some other format will make more work for the editors and they will be grumpy. If you absolutely cannot figure out how to do references, pick a consistent label name for each reference to use, and the editor may help you out. 
 
 Equations are appropriate here if needed; symbols should be consistent throughout the paper. An example equation is:
 \begin{equation}
@@ -102,12 +86,12 @@ For initial submission it is common to set the paper to print doublespaced and w
 
 
 
-\section{Methods and materials}
+\section{Methods and Materials}
 Provide all methods and materials in a form that is replicable by a competent scientist or engineer. This section is normally written in past tense, e.g. ``We used an Easy Bake Oven (Hasbro; Pawtucket, RI) to evaporate plutonium samples to complete dryness...'' Key pieces of equipment or key reagents and materials should be listed with a source where they were obtained from. 
 
 \textbf{Do not include results in your methods.} The methods tell other scientists how to replicate what you did. \textbf{Do not provide a laundry list or recipe of steps like you copied from a lab handout or an AI; these will be rejected.} 
 
-It is appropriate to put links to code or datasets; put long items in an appendix or provide online.  For example, all code used to generate this example is provided at \url{https://github.com/devangel77b/jse-mechanics-template/}. 
+It is appropriate to put links to code or datasets; put long items in an appendix or provide online.  For example, all code used to generate this example is provided at \url{https://github.com/devangel77b/jse-electricity-template/}. 
 
 
 \subsection{Use of subsections}
@@ -117,7 +101,7 @@ Consider breaking the methods into subsections, either for different major metho
 
 
 
-        
+
 \section{Results}
 The results should deal with ``just the facts'' exactly what you saw or measured, without interpretation. You should include graphs, tables, summary statistics, and results of statistical tests here. The key thing here is that you are reporting truthfully what you saw as just the facts; people may differ on the interpretations but results ought to be taken at face value unless your methods are flawed. Figures and tables must be numbered and must be referred to in the text. 
 
@@ -129,61 +113,74 @@ An example of a figure is \cref{fig:foo}. Note that the figure reference name mu
 \includegraphics{figures/newfig1.pdf}
 % \includesvg{figures/fig2.svg}
 \end{center}
-\caption{This is a caption. Captions for figures go below the figure.}
+\caption{This is a caption. Captions for figures go below the figure. For IEEE format the width is 3.5 inches, or 7.16 inches for two columns.}
 \label{fig:foo}
 \end{figure}
     
 An example of a table is \cref{tab:bar}. 
 \begin{table}
-\begin{center}
-\begin{ruledtabular}
-\begin{tabular}{cc}
-$x$ & $\bar{x}$ \\
-\colrule
-0 & 1 \\ 
-1 & 0 \\
-\end{tabular}
-\end{ruledtabular}
-\end{center}
 \caption{This is a table. Captions for tables go above the table.}
 \label{tab:bar}
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+$x$ & $\bar{x}$ \\
+\midrule
+0 & 1 \\ 
+1 & 0 \\
+\bottomrule 
+\end{tabular}
+\end{center}
 \end{table}
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
 \section{Discussion}
 The discussion is where you interpret the meaning of your results and whether they support your hypotheses or refute alternative hypotheses. You should refer to tables, figures, etc by number and use them in supporting your arguments here. To refer to a figure do like this: \cref{fig:foo} shows the third Zonklar moment as a function of $t$. To refer to a table like \cref{tab:bar}, do like this. 
 
-    
-    
-    
-    
-    
-    
-    
-\section{Acknowledgements}
+
+
+
+
+
+
+
+
+
+
+%\section*{Contributions}
+\section{Acknowledgement}
 Keep it short or the editors will shorten it for you. JL wrote and PM wrote the lyrics. GH contributed rhythm guitar tracks. RS contributed drumbeats. Do not write long essays about Ms Komitas, Dr E, or the S\&E program here; we don't need or want fluff. 
 
 
 
-% References – Do not spend too much time trying to perfectly format per MLA or whatever because journals often have their own preferred formats; as long as you have author, title, journal, year, volume, page number it will be findable. Peer reviewed journals or published work only; Food Girl’s Blog is not a peer reviewed journal; Wikipedia is not a peer reviewed journal; Webster’s Dictionary is not necessary in a scientific journal article. If I find fake references your paper will be rejected. 
 
 
 
 
-
-
+%\end{thebibliography}
+\bibliographystyle{IEEEtran}
 \bibliography{example.bib}
-%References
-%[1] P.A. Tipler and G. Mosca. Physics for Scientists and Engineers, 5th ed. (W H Freeman and Company, New York, 2004).
-%
-%“De Caelo : Aristotle : Free Download, Borrow, and Streaming : Internet Archive.” Internet Archive, 2026, archive.org/details/decaelo00aris. Accessed 12 Jan. 2026.
-%
-%Galilei, G. Dialogues Concerning Two New Sciences (1638).
-%
-%Chazot, Christophe. FizziQ. 5.0.4, Trapèze. Digital, 2025, Apple App Store.
 
+% Images for the biography should be a 1in wide by 1.25 high or a 5:4 aspect ratio
+% Keep your biography short and to the point or the editors will shorten it
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{sayyagari.jpeg}}]{Saketh Ayyagari} is a senior in the Science and Engineering Magnet Program at Manalapan High School. He is also an intern at Commvault in Tinton Falls, NJ, founder of the Cyber Security Club, member of the Cyber Security Team, and captain of the FIRST Technology Challenge robotics team \#13115 Brave Robotics. 
+\end{IEEEbiography}
 
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{vcollemi.jpeg}}]{Victoria Collemi} is a senior in the Science and Engineering Magnet Program at Manalapan High School. She is also an intern at Girl in Space Club, president of the Robotics Club, and founder and president of the Rocketry Club. 
+\end{IEEEbiography}
+\vfill
+\newpage 
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{kshah.jpeg}}]{Krish Shah} is a senior in the Science and Engineering Magnet Program at Manalapan High School. He is also an intern at Commvault in Tinton Falls, NJ, and is a member of the FIRST Technology Challenge robotics team \#13115 Brave Robotics. 
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{ktomazic.jpeg}}]{Kevin Tomazic} is a senior in the Science and Engineering Magnet Program at Manalapan High School. His current senior project is to create a robot designed to autonomous clean beaches. He is also the only department head of the Manalapan High School Drama Club tech department. 
+\end{IEEEbiography}
+\vfill
 \end{document}
+
