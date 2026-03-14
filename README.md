@@ -53,7 +53,7 @@ In addition to the sections below, you must provide an informative title!
 
 ## Figures
 
-**Figures should be formatted for 1 column width which is 3.4167 inches or 246 point.** Your figure should be relevant to the text, easily readable, not distracting. You must provide a **caption for each figure**, and **each figure must be referred to in the text by number** (e.g. Fig 2 shows the third Zonklar moment as a function of t). 
+**Figures should be formatted for 1 column width which is 3.5 inches.** Your figure should be relevant to the text, easily readable, not distracting. You must provide a **caption for each figure**, and **each figure must be referred to in the text by number** (e.g. Fig 2 shows the third Zonklar moment as a function of t). 
 
 ### Vector art
 **Vector art**, like graphs and diagrams you drew, should be done as a SVG in something like Inkscape (free) or Adobe Illustrator. These vector formats are scalable, which is why you use them here. Do not do these as a JPG or PNG as those formats become pixellated if you zoom them in or out. 
